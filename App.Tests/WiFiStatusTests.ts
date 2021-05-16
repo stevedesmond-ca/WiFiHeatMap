@@ -9,7 +9,7 @@ export default class WiFiStatusTests extends TestSuite {
         const signal = -40;
 
         //act
-        const component = mount(WiFiStatus, { propsData: { signal: signal } });
+        const component = mount(WiFiStatus, { props: { signal: signal } });
 
         //assert
         this.assert.stringContains('rgba(0, 255, 0, 1)', component.html())
@@ -22,7 +22,7 @@ export default class WiFiStatusTests extends TestSuite {
         const signal = null;
 
         //act
-        const component = mount(WiFiStatus, { propsData: { signal: signal } });
+        const component = mount(WiFiStatus, { props: { signal: signal } });
 
         //assert
         this.assert.stringContains('rgba(0, 0, 0, 0.5)', component.html())
@@ -35,7 +35,7 @@ export default class WiFiStatusTests extends TestSuite {
         const color = 'rgba(0, 255, 0, 1)';
 
         //act
-        const component = mount(WiFiStatus, { propsData: { color: color } });
+        const component = mount(WiFiStatus, { props: { color: color } });
 
         //assert
         this.assert.stringDoesNotContain('fading', component.html());
@@ -44,7 +44,7 @@ export default class WiFiStatusTests extends TestSuite {
     @Test()
     async colorFadesAsReadingGoesStale() {
         //arrange
-        const component = mount(WiFiStatus, { propsData: { color: 'rgba(0, 255, 0, 1)', last_updated: 'earlier' } });
+        const component = mount(WiFiStatus, { props: { color: 'rgba(0, 255, 0, 1)', last_updated: 'earlier' } });
 
         //act
         await component.setProps({ last_updated: 'now' });

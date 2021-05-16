@@ -8,14 +8,14 @@
 </template>
 
 <script lang="ts">
-  import Vue from 'vue';
   import APForm from './ap-form.vue';
   import BackgroundForm from './background-form.vue';
   import WiFiStatus from './wifi-status.vue';
   import Actions from './actions.vue';
   import SharedState from "./SharedState";
+  import { defineComponent } from 'vue';
 
-  export default Vue.extend({
+  export default defineComponent({
     components: {
       'ap-form': APForm,
       'background-form': BackgroundForm,

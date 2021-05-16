@@ -1,21 +1,21 @@
 <template>
   <div class="app">
     <status :status="connection_status"></status>
-    <header-menu :last_updated="last_updated" @background="setBackground($event)"></header-menu>
+    <header-menu :last_updated="last_updated"></header-menu>
     <main-area :enabled="!connection_status"></main-area>
     <debug-panel />
   </div>
 </template>
 
 <script lang="ts">
-  import Vue from "vue";
   import Status from './status.vue';
   import HeaderMenu from './header-menu.vue';
   import MainArea from './main-area.vue';
   import DebugPanel from './debug-panel.vue';
   import SharedState from "./SharedState";
+  import { defineComponent } from 'vue';
 
-  export default Vue.extend({
+  export default defineComponent({
     components: {
       'status': Status,
       'header-menu': HeaderMenu,

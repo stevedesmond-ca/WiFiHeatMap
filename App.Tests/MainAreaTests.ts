@@ -65,11 +65,10 @@ export default class MainAreaTests extends TestSuite {
     async clickingCanvasAddsReading() {
         //arrange
         const state = new AppViewModel();
-        const component = mount(MainArea, { data: () => ({ state: state }), propsData: { enabled: true } });
+        const component = mount(MainArea, { data: () => ({ state: state }), props: { enabled: true } });
 
         //act
         await component.get('canvas').trigger('click');
-        await component.vm.$nextTick();
 
         //assert
         this.assert.equal(1, state.readings.length);
@@ -83,7 +82,6 @@ export default class MainAreaTests extends TestSuite {
 
         //act
         await component.get('canvas').trigger('click');
-        await component.vm.$nextTick();
 
         //assert
         this.assert.empty(state.readings);

@@ -7,11 +7,11 @@
 </template>
 
 <script lang="ts">
-  import Vue from 'vue';
   import wifi_icon from './wifi-icon.vue';
   import ColorConverter from './ColorConverter';
+  import { defineComponent } from 'vue';
 
-  export default Vue.extend({
+  export default defineComponent({
     components: {
       'wifi-icon': wifi_icon
     },

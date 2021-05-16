@@ -27,11 +27,11 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent } from 'vue';
 import Signal from './Signal';
 import SharedState from "./SharedState";
 
-export default Vue.extend({
+export default defineComponent({
   data: () => ({
     state: SharedState
   }),

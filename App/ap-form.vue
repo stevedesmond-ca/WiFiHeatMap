@@ -23,11 +23,11 @@
 </template>
 
 <script lang="ts">
-  import Vue from 'vue';
+  import { defineComponent } from 'vue';
   import AccessPoint from './AccessPoint';
   import SharedState from "./SharedState";
 
-  export default Vue.extend({
+  export default defineComponent({
     data: () => ({
       state: SharedState,
     }),

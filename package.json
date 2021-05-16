@@ -33,8 +33,10 @@
     "@types/delaunator": "3.0.0",
     "@types/jsdom": "16.2.11",
     "@types/node": "15.12.2",
+    "@vitejs/plugin-vue": "1.2.3",
+    "@vue/compiler-sfc": "3.1.1",
     "@vue/component-compiler-utils": "3.2.1",
-    "@vue/test-utils": "1.2.0",
+    "@vue/test-utils": "2.0.0-rc.6",
     "delaunator": "5.0.0",
     "global-jsdom": "8.1.0",
     "jsdom": "16.6.0",
@@ -42,9 +44,7 @@
     "typescript": "4.3.2",
     "vite": "2.3.7",
     "vite-plugin-html": "2.0.7",
-    "vite-plugin-vue2": "1.6.2",
-    "vue": "2.6.14",
-    "vue-template-compiler": "^2.6.14",
+    "vue": "3.1.1",
     "xunit.ts": "0.10.2"
   },
   "browserslist": [

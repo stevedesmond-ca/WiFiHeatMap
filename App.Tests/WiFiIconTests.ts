@@ -9,7 +9,7 @@ export default class WiFiIconTests extends TestSuite {
         const color = 'rgba(0, 255, 0, 1)';
 
         //act
-        const component = mount(WiFiIcon, { propsData: { color: color } });
+        const component = mount(WiFiIcon, { props: { color: color } });
 
         //assert
         this.assert.stringContains('style="fill: rgba(0, 255, 0, 1);"', component.html());

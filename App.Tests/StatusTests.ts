@@ -9,7 +9,7 @@ export default class StatusTests extends TestSuite {
         const status = 'test message';
 
         //act
-        const component = mount(Status, { propsData: { status: status } });
+        const component = mount(Status, { props: { status: status } });
 
         //assert
         this.assert.equal('test message', component.text());
@@ -21,9 +21,9 @@ export default class StatusTests extends TestSuite {
         const status = '';
 
         //act
-        const component = mount(Status, { propsData: { status: status } });
+        const component = mount(Status, { props: { status: status } });
 
         //assert
-        this.assert.empty(component.html());
+        this.assert.empty(component.text());
     }
 }

@@ -48,7 +48,7 @@ export default class DebugPanelTests extends TestSuite {
         const sorted_signals = component.findAll('table tbody tr');
 
         //assert
-        this.assert.stringContains('-40', sorted_signals.at(0).text());
-        this.assert.stringContains('-50', sorted_signals.at(1).text());
+        this.assert.stringContains('-40', sorted_signals[0].text());
+        this.assert.stringContains('-50', sorted_signals[1].text());
     }
 }

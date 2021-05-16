@@ -15,7 +15,7 @@ export default class DataPointTests extends TestSuite {
         const selected = new AccessPoint('test');
 
         //act
-        const component = mount(DataPoint, { propsData: { reading: reading, selected: selected } });
+        const component = mount(DataPoint, { props: { reading: reading, selected: selected } });
 
         //assert
         this.assert.equal('-30 dBm', component.text());
@@ -28,7 +28,7 @@ export default class DataPointTests extends TestSuite {
         const selected = new AccessPoint('test');
 
         //act
-        const component = mount(DataPoint, { propsData: { reading: reading, selected: selected } });
+        const component = mount(DataPoint, { props: { reading: reading, selected: selected } });
 
         //assert
         this.assert.equal('(no signal)', component.text());
@@ -41,7 +41,7 @@ export default class DataPointTests extends TestSuite {
         const selected = new AccessPoint('test');
 
         //act
-        const component = mount(DataPoint, { propsData: { reading: reading, selected: selected } });
+        const component = mount(DataPoint, { props: { reading: reading, selected: selected } });
 
         //assert
         this.assert.stringContains('left: 12px;', component.html());
@@ -59,7 +59,7 @@ export default class DataPointTests extends TestSuite {
         ]
         const reading = new Reading(1, new Point(12, 34), [new Signal('mac', 'test', 2, -30)]);
         const selected = new AccessPoint('test');
-        const component = mount(DataPoint, { data: () => ({state: state }), propsData: { index: 1, reading: reading, selected: selected } });
+        const component = mount(DataPoint, { data: () => ({state: state }), props: { index: 1, reading: reading, selected: selected } });
         global.confirm = () => true;
 
         //act
@@ -82,7 +82,7 @@ export default class DataPointTests extends TestSuite {
         ]
         const reading = new Reading(1, new Point(12, 34), [new Signal('mac', 'test', 2, -30)]);
         const selected = new AccessPoint('test');
-        const component = mount(DataPoint, { data: () => ({state: state }), propsData: { index: 1, reading: reading, selected: selected } });
+        const component = mount(DataPoint, { data: () => ({state: state }), props: { index: 1, reading: reading, selected: selected } });
         global.confirm = () => false;
 
         //act

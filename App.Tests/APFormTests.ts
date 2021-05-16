@@ -30,8 +30,8 @@ export default class APFormTests extends TestSuite {
         const options = component.findAll('option');
 
         //assert
-        this.assert.equal('ssid1', options.at(0).text());
-        this.assert.equal('ssid2', options.at(1).text());
+        this.assert.equal('ssid1', options[0].text());
+        this.assert.equal('ssid2', options[1].text());
     }
 
     @Test()
@@ -47,10 +47,10 @@ export default class APFormTests extends TestSuite {
 
         //assert
         const options = component.findAll('option');
-        this.assert.equal('ssid1 @ 2 GHz', options.at(0).text());
-        this.assert.equal('ssid1 @ 5 GHz', options.at(1).text());
-        this.assert.equal('ssid2 @ 2 GHz', options.at(2).text());
-        this.assert.equal('ssid2 @ 5 GHz', options.at(3).text());
+        this.assert.equal('ssid1 @ 2 GHz', options[0].text());
+        this.assert.equal('ssid1 @ 5 GHz', options[1].text());
+        this.assert.equal('ssid2 @ 2 GHz', options[2].text());
+        this.assert.equal('ssid2 @ 5 GHz', options[3].text());
     }
 
     @Test()
@@ -66,14 +66,14 @@ export default class APFormTests extends TestSuite {
 
         //assert
         const options = component.findAll('option');
-        this.assert.equal('ssid1 @ 2 GHz (mac1)', options.at(0).text());
-        this.assert.equal('ssid1 @ 2 GHz (mac8)', options.at(1).text());
-        this.assert.equal('ssid1 @ 5 GHz (mac6)', options.at(2).text());
-        this.assert.equal('ssid1 @ 5 GHz (mac7)', options.at(3).text());
-        this.assert.equal('ssid2 @ 2 GHz (mac2)', options.at(4).text());
-        this.assert.equal('ssid2 @ 2 GHz (mac5)', options.at(5).text());
-        this.assert.equal('ssid2 @ 5 GHz (mac3)', options.at(6).text());
-        this.assert.equal('ssid2 @ 5 GHz (mac4)', options.at(7).text());
+        this.assert.equal('ssid1 @ 2 GHz (mac1)', options[0].text());
+        this.assert.equal('ssid1 @ 2 GHz (mac8)', options[1].text());
+        this.assert.equal('ssid1 @ 5 GHz (mac6)', options[2].text());
+        this.assert.equal('ssid1 @ 5 GHz (mac7)', options[3].text());
+        this.assert.equal('ssid2 @ 2 GHz (mac2)', options[4].text());
+        this.assert.equal('ssid2 @ 2 GHz (mac5)', options[5].text());
+        this.assert.equal('ssid2 @ 5 GHz (mac3)', options[6].text());
+        this.assert.equal('ssid2 @ 5 GHz (mac4)', options[7].text());
     }
 
     @Test()
