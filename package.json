@@ -33,7 +33,7 @@
     "@types/delaunator": "3.0.0",
     "@types/jsdom": "16.2.11",
     "@types/node": "15.12.2",
-    "@vue/component-compiler-utils": "3.2.0",
+    "@vue/component-compiler-utils": "3.2.1",
     "@vue/test-utils": "1.2.0",
     "delaunator": "5.0.0",
     "global-jsdom": "8.1.0",
